@@ -1,0 +1,196 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+:root {
+  --bg: #fff;
+  --color: #11111b;
+  --ghost: #00000010;
+  --primary: #7287FD;
+  --base: #EFF1F5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11111b;
+    --color: #fff;
+    --ghost: #ffffff10;
+    --primary: #7287FD;
+    --base: #1e1e2e;
+  }
+}
+
+* {
+  color: var(--color);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Pretendard";
+  transition: all .5s;
+  transition-timing-function: cubic-bezier(0.2, 0.15, 0, 1.44);
+}
+body{
+  background-color: var(--bg);
+}
+
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+article{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--base);
+  padding: 20px;
+  width: 450px;
+  height: 337px;
+  border-radius: 15px;
+  justify-content: space-between;
+  &#m{
+    background-color: var(--primary);
+    > section&#head{
+      > h1{
+        color: var(--bg);
+        overflow-x: scroll;
+        text-wrap: nowrap;
+        font-size: 30px;
+        font-weight: 900;
+      }
+      color: var(--bg);
+      > h2{
+        margin-top: 15px;
+        font-size: 26px;
+        overflow-y: scroll;
+        height: 120px;
+        font-weight: 500;
+      }
+    }
+  &:hover{
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 100px var(--ghost);
+  }
+
+  > section{
+    &#head{
+      > h1{
+        overflow-x: scroll;
+        text-wrap: nowrap;
+        font-size: 30px;
+        font-weight: 900;
+      }
+      > h2{
+        margin-top: 15px;
+        font-size: 26px;
+        overflow-y: scroll;
+        height: 120px;
+        font-weight: 500;
+      }
+    }
+
+    &#foot{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > #btns{
+        /* background-color: red; */
+        display: flex;
+        gap: 20px;
+        > div{
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          background-color: var(--ghost);
+          padding: 10px;
+          border-radius: 5px;
+
+          &:hover{
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 0 100px var(--ghost);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+
+  
+  
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+#add{
+  position: absolute;
+  background-color: var(--base);
+  right: 50px;
+  bottom: 50px;
+  padding: 15px;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+#backdrop{
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  background-color: #00000050;
+}
+
+form{
+  position: absolute;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 100px #00000005;
+  height: 600px;
+  width: 500px;
+  padding: 50px;
+  > h1{
+    font-size: 30px;
+  }
+  > input,textarea{
+    height: 33px;
+    padding: 10px;
+    font-size: 26px;
+    border: none;
+    outline: none;
+    background-color: var(--base);
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+    &#d{
+      padding-top: 20px;
+      padding-bottom: 200px;
+    }
+    &[type="submit"]{
+      margin-top: 28px;
+      background-color: var(--primary);
+      height: 50px;
+      border-radius: 10000px;
+      color: #fff;
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+      }
+      &:active{
+        cursor: pointer;
+        transform: scale(0.98);
+      }
+    }
+  }
+}
