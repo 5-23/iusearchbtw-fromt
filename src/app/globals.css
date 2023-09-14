@@ -50,23 +50,15 @@ article{
   justify-content: space-between;
   &#m{
     background-color: var(--primary);
-    > section&#head{
+    > section#head{
       > h1{
         color: var(--bg);
-        overflow-x: scroll;
-        text-wrap: nowrap;
-        font-size: 30px;
-        font-weight: 900;
       }
-      color: var(--bg);
       > h2{
-        margin-top: 15px;
-        font-size: 26px;
-        overflow-y: scroll;
-        height: 120px;
-        font-weight: 500;
+        color: var(--bg);
       }
     }
+  }
   &:hover{
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 0 100px var(--ghost);
