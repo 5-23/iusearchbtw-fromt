@@ -38,13 +38,10 @@ export default function Home() {
       <main>
         <div id='backdrop' style={{display: omv? "block": "none"}} onClick={() => omf(false)}></div>
         <form method='post' action="?" style={{display: omv? "flex": "none"}}>
-          <h1>UserName</h1>
-          <input type="text" name='n' id='n'/>
           <h1>Title</h1>
           <input type="text" name='t' id='t'/>
           <h1>Description</h1>
           <textarea name="d" id="d"></textarea>
-          {/* <input type="text" name='d' id='d'/> */}
   
           <input type="submit" />
         </form>
